@@ -9,6 +9,8 @@ import { PizzaComponent } from './pizza/pizza.component';
 import { MenuComponent } from './menu/menu.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { HomeComponent } from './home/home.component';
+import { CounterComponent } from './counter/counter.component';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HomeComponent } from './home/home.component';
     PizzaComponent,
     MenuComponent,
     CatalogComponent,
-    HomeComponent
+    HomeComponent,
+    CounterComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

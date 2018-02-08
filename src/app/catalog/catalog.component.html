@@ -3,7 +3,6 @@
     <app-pizza [pizza]="pizzaSelected"></app-pizza>
   </div>
 </div>
-  
 <div class="row">
   <div *ngFor="let pizzaIteration of pizzaList" class="card col-md-3">
     <div>
@@ -14,6 +13,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><h6>Prix</h6>{{ pizzaIteration.price }} euros</li>
         <li class="list-group-item"><button href="#" class="btn btn-primary" (click)="onSelect(pizzaIteration)">Voir la pizza</button></li>
+        <li class="list-group-item"><app-counter (plus)="change($event)" (minus)="change($event)"></app-counter></li>
       </ul>
     </div>
   </div>
