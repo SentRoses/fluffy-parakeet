@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-lg-4 offset-lg-4">
+    <app-pizza [pizza]="pizzaSelected"></app-pizza>
+  </div>
+</div>
+  
+<div class="row">
+  <div *ngFor="let pizzaIteration of pizzaList" class="card col-md-3">
+    <div>
+      <img class="card-img-top" [src]="pizzaIteration.img" [alt]="pizzaIteration.name">
+      <div class="card-body">
+        <h5 class="card-title">{{ pizzaIteration.name }}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><h6>Prix</h6>{{ pizzaIteration.price }} euros</li>
+        <li class="list-group-item"><button href="#" class="btn btn-primary" (click)="onSelect(pizzaIteration)">Voir la pizza</button></li>
+      </ul>
+    </div>
+  </div>
+</div>

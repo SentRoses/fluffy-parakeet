@@ -1,0 +1,19 @@
+<header class="navbar mb-5 navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand">
+      <img src="/assets/img/brand.png" width="30" height="34" class="d-inline-block align-top mx-2" alt="">
+      {{ title }}
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleCollapseNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [class.show]="isCollapsed">
+      <ul class="navbar-nav mr-auto flex-row align-middle">
+        <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Accueil</a></li>
+        <li class="nav-item"><a routerLink="/nos-pizzas" class="nav-link" routerLinkActive="active">Nos pizzas</a></li>
+        <li class="nav-item"><a routerLink="/contact" class="nav-link disabled" routerLinkActive="active">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
